@@ -1,0 +1,17 @@
+.mainContainer {
+  opacity: 1;
+  background-color: rgba(51, 51, 58, 1);
+}
+
+.footerListsContainer {
+  display: flex;
+  /* justify-content: center; */
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  padding: 50px;
+}
+
+.listItem:hover{
+    color:  rgba(255,94,27,1);
+}

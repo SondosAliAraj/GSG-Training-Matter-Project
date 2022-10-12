@@ -1,0 +1,19 @@
+@import url("https://fonts.googleapis.com/css2?family=Inconsolata:wght@300&family=Poppins:wght@300&display=swap");
+
+.buttonContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.seeJournalBtn {
+  font-family: "Poppins", sans-serif;
+  text-transform: uppercase;
+  width: 120px;
+  height: 30px;
+  border: none;
+  background-color: black;
+  color: white;
+  margin-top: 50px;
+  cursor: pointer;
+
+}

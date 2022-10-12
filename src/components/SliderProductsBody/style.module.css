@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@300&family=Poppins:wght@300&display=swap');
+
+.coverImageContainer{
+    
+    /* z-index: -1; */
+    opacity: 1;
+    position: relative;
+    padding: 0px;
+}
+
+.coverImage{
+    width: 100%;
+    height: 500px;
+    
+}
+
+
+
+.sliderContainer{
+    opacity: 1;
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+
+.RightArrowSlider{
+    transform: rotate(180deg);
+    top:15%;
+    right: 0%;
+    position: absolute;
+}
+
+.LeftArrowSlider{
+    padding-top: 150px;
+    position: absolute;
+    bottom: 70%;
+}
+
+.LeftRightSlidersContainer{
+    /* display: inline-block; */
+    flex-wrap: wrap;
+    /* padding: 5px; */
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 30%;
+}
+
+
+
+.LeftRightSlidersContainer p{
+    /* padding-left: 500px; */
+    font-weight: bold;
+    font-family:'Poppins', sans-serif;
+    opacity: 1;
+    color: rgba(255,255,255,1);
+    font-size: 60px;
+    font-weight: 400;
+    font-style: normal;
+    letter-spacing: 0px;
+    text-align: left;
+    line-height: 80px;
+    width: 400px;
+    margin-bottom: 10px;
+    position: absolute;
+    right: 15%;
+    bottom: 75%;
+
+
+}
+
+#shopNowBtn{
+    margin-left: 510px;
+    margin-top: 0px;
+    opacity: 1;
+    color: rgba(255,255,255,1);
+    font-family: 'Poppins', sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    font-style: normal;
+    letter-spacing: 2px;
+    text-align: center;
+    line-height: 20px;
+    text-transform: uppercase;
+    border-bottom: 2px solid rgba(255,255,255,1);
+    text-decoration: none;
+    padding-bottom: 10px;
+    position: absolute;
+    right: 39%;
+    bottom: 69%;
+    width: fit-content;
+    
+}
+
+
+#shopNowBtn:hover{
+    transform: rotate3d(90deg);
+    color: black;
+    border-bottom: 2px solid black;
+
+}
