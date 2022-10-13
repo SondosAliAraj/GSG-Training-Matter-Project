@@ -1,5 +1,5 @@
 .recommendedVideosContainer {
-  width: auto;
+  /* width: auto; */
   /* height: 600px; */
 
   display: grid;
@@ -12,6 +12,8 @@
 
 .mainContainer {
   background-color: rgba(252, 252, 252, 1);
+  width: 100%;
+  /* padding: 10px; */
 }
 
 .btnContainer{

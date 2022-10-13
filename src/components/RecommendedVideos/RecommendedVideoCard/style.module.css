@@ -2,8 +2,9 @@
 
 .mainContainer {
   position: relative;
-  width: 361px;
-  height: 300px;
+  width: 350px;
+  height: 250;
+  
 }
 .videoContainer {
   /* font-family: "Poppins", sans-serif;
@@ -12,7 +13,7 @@
   /* position: relative; */
 }
 .imgPart {
-  width: 361px;
+  width: 350px;
   height: 240px;
 }
 .imgPart:hover {

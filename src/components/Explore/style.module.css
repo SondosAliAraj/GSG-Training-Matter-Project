@@ -12,7 +12,7 @@
   position: relative;
   display: flex;
   flex-direction: row;
-  padding-left: 5%;
+  /* padding-left: 5%; */
   height: 620px;
 }
 
@@ -26,7 +26,7 @@
 }
 
 .firstPost {
-  width: 550px;
+  width: 500px;
   height: 600px;
 }
 
@@ -61,13 +61,13 @@
   letter-spacing: 0px;
   text-align: left;
   width: 500px;
-  padding-bottom: 20px;
+  /* padding-bottom: 20px; */
 }
 
 .postImage {
   width: 500px;
-  height: 350px;
-  padding-top: 30px;
+  height: 360px;
+  padding-top: 35px;
 }
 
 .otherPostsContainer {
@@ -87,7 +87,7 @@
 
 .rightPostTitle1 {
   width: 300px;
-  margin-top: 1%;
+  /* margin-top: 1%; */
 }
 
 .rightPostDescription1 {

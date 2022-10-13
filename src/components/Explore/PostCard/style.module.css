@@ -27,8 +27,8 @@
 
 .cardContainer {
   border-top: 2px solid black;
-  width: fit-content;
-  height: 200px;
+  width: 100%;
+  height: 150px;
 
 }
 

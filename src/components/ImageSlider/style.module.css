@@ -1,0 +1,114 @@
+.slideStyles {
+  width: 100%;
+  height: 100%;
+  /* border-radius: 10px; */
+  background-size:cover;
+  background-position: center;
+}
+
+.rightArrowStyles {
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+  right:32px;
+  font-size: 45px;
+  color: #fff;
+  z-index: 1;
+  cursor: pointer;
+}
+
+.leftArrowStyles {
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+  left:32px;
+  font-size: 45px;
+  color: #fff;
+  z-index: 1;
+  cursor: pointer;
+}
+
+.sliderStyles {
+  position: relative;
+  height:100%;
+}
+
+.dotsContainerStyles{
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  top :90%;
+  left: 45%;
+}
+
+.dotStyle  {
+  margin: 0 3px;
+  cursor: pointer;
+  font-size: 40px;
+  color: white;
+}
+
+
+.Description{
+    /* padding-left: 500px; */
+    font-weight: bold;
+    font-family:'Poppins', sans-serif;
+    opacity: 1;
+    color: rgba(255,255,255,1);
+    font-size: 60px;
+    font-weight: 400;
+    font-style: normal;
+    letter-spacing: 0px;
+    text-align: left;
+    line-height: 80px;
+    width: 400px;
+    position: relative;
+    /* margin-bottom: 10px; */
+    /* position: absolute; */
+    /* right: 15%;
+    bottom: 75%; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#shopNowBtn{
+    /* margin-left: 510px; */
+    /* margin-top: 0px; */
+    opacity: 1;
+    color: rgba(255,255,255,1);
+    font-family: 'Poppins', sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    font-style: normal;
+    letter-spacing: 2px;
+    text-align: center;
+    line-height: 20px;
+    text-transform: uppercase;
+    border-bottom: 2px solid rgba(255,255,255,1);
+    text-decoration: none;
+    /* padding-bottom: 10px; */
+    position: absolute;
+    top: 100%;
+    left: 5%;
+    /* right: 39%;
+    bottom: 69%; */
+    width: fit-content;
+    
+}
+
+
+#shopNowBtn:hover{
+    transform: rotate3d(90deg);
+    color: black;
+    border-bottom: 2px solid black;
+
+}
+
+.DescriptionContainer{
+  position: absolute;
+  top: 5%;
+  right: 15%;
+
+}
+
