@@ -91,3 +91,9 @@
     justify-content: center;
     flex-direction: column;
 }
+
+@media (max-width:600) {
+    .mainContainer{
+        flex-direction: column;
+    }
+}

@@ -56,6 +56,7 @@
 
 import { useState } from "react";
 import styles from "./style.module.css";
+import SliderArrow from "./SliderArrow";
 
 const ImageSlider = ({ slides }) => {
   const slideStyles = {
@@ -87,10 +88,16 @@ const ImageSlider = ({ slides }) => {
     <div className={styles.sliderStyles}>
       <div>
         <div onClick={goToPrevious} className={styles.leftArrowStyles}>
-          ❰
+          {/* ❰ */}
+          <div className={styles.LeftArrowSlider}>
+            <SliderArrow />
+          </div>
         </div>
         <div onClick={goToNext} className={styles.rightArrowStyles}>
-          ❱
+          {/* ❱ */}
+          <div className={styles.RightArrowSlider}>
+            <SliderArrow />
+          </div>
         </div>
       </div>
       <div style={slideStylesWidthBackground}></div>

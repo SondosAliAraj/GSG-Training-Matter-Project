@@ -19,7 +19,7 @@ const SliderProductsBody = () => {
           </a>
         </div>
         <div className={styles.RightArrowSlider}>
-          <SliderArrow />{" "}
+          <SliderArrow />
         </div>
       </div>
     </div>

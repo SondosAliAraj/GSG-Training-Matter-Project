@@ -96,3 +96,15 @@
   line-height: 25px;
   background-color: rgba(255, 255, 255, 1);
 }
+
+@media (max-width : 600) {
+  .Card {
+  width: 50px;
+  height: 150px;
+}
+#productImage {
+  width: 50px;
+  height: 150px;
+}
+  
+}

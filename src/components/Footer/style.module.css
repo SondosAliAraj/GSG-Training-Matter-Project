@@ -15,3 +15,9 @@
 .listItem:hover{
     color:  rgba(255,94,27,1);
 }
+
+@media (max-width:600) {
+  .footerListsContainer{
+    flex-direction: column;
+  }
+}
