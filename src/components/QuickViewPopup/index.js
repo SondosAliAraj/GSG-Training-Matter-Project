@@ -15,12 +15,12 @@ const QuickViewPopup = () => {
   const { products } = productsArray;
   return (
     <div className={styles.QVPopupContainer}>
-      <Modal isOpen={true}>
+      {/* <Modal isOpen={isOpen} onRequestClose={() => setmodalIsOpen(false)}> */}
         {products.map((item) => (
           <>
             <div className={styles.headerContainer}>
               <p>{item.title}</p>
-              <BiX />
+              {/* <BiX /> */}
               {/* <img
                 className={styles.closeIcon}
                 src="./images/rectangle-xmark-solid.svg"
@@ -82,7 +82,7 @@ const QuickViewPopup = () => {
             <BlackButton title="View Full product Details" />
           </>
         ))}
-      </Modal>
+      {/* </Modal> */}
     </div>
   );
 };

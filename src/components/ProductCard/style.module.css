@@ -1,6 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Inconsolata:wght@300&family=Poppins:wght@300&display=swap");
 
-
 .Card {
   font-family: "Poppins", sans-serif;
   opacity: 1;
@@ -12,7 +11,7 @@
   background-color: rgba(255, 255, 255, 1);
 }
 
-.Card:after {
+/* .Card:after {
   font-family: "Poppins", sans-serif;
   content: "Quick View";
   text-transform: uppercase;
@@ -33,7 +32,7 @@
   font-style: normal;
   line-height: 20px;
   display: none;
-}
+} */
 .Card:hover::after {
   /* display: block; */
   display: flex;
@@ -73,16 +72,33 @@
   border: 1px solid rgb(244, 243, 243);
 }
 
-#productImage {
+.productImage {
   overflow: hidden;
   width: 250px;
   height: 350px;
   background-color: rgba(255, 255, 255, 1);
+  position: relative;
 }
 
-#productImage:hover {
+.productImage:hover {
   opacity: 0.3;
 }
+
+.QVBtn {
+  position: absolute;
+  top: 30%;
+  left: 30%;
+  display: none;
+}
+/* .productImage .QVBtn{
+  display: none;
+} */
+
+.Card:hover .QVBtn {
+  display: block;
+  opacity: 1;
+}
+
 
 .productDescription {
   opacity: 1;
@@ -97,14 +113,23 @@
   background-color: rgba(255, 255, 255, 1);
 }
 
-@media (max-width : 600) {
+.closeBtn{
+  border: none;
+  color: black;
+  font-size: 14px;
+  font-weight: bold;
+  position: absolute;
+  right: 2%;
+  background-color: white;
+}
+
+@media (max-width: 600) {
   .Card {
-  width: 50px;
-  height: 150px;
-}
-#productImage {
-  width: 50px;
-  height: 150px;
-}
-  
+    width: 50px;
+    height: 150px;
+  }
+  .productImage {
+    width: 50px;
+    height: 150px;
+  }
 }
