@@ -1,0 +1,68 @@
+.mainContainer {
+  display: flex;
+  position: relative;
+}
+.sizeContainer {
+  display: flex;
+  /* justify-content: flex-start; */
+  justify-content: space-around;
+  width: 250px;
+  position: relative;
+}
+.mainContainer p {
+  opacity: 1;
+  color: rgba(51, 51, 58, 1);
+  font-size: 12px;
+  font-weight: 600;
+  font-style: normal;
+  letter-spacing: 1px;
+  text-align: left;
+  line-height: 40px;
+  text-transform: uppercase;
+  cursor: pointer;
+  position: absolute;
+  right: 10px;
+}
+
+.sizeBox {
+  width: 50px;
+  height: 40px;
+  border: 1px solid rgba(222, 222, 222, 1);
+  opacity: 1;
+  background-color: rgba(243, 243, 243, 1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sizeBox:hover{
+    color:  rgba(255, 96, 8, 1);
+    background-color: white;
+}
+
+.sizeBox:active{
+    border: 1px solid  rgba(255, 96, 8, 1) ;
+}
+
+.title {
+  opacity: 1;
+  color: rgba(51, 51, 58, 1);
+  font-size: 12px;
+  font-weight: 400;
+  font-style: normal;
+  letter-spacing: 1px;
+  text-align: left;
+  line-height: 40px;
+  text-transform: uppercase;
+}
+
+.modelDetails {
+  opacity: 1;
+  color: rgba(102, 102, 102, 1);
+  font-size: 12px;
+  font-weight: 400;
+  font-style: normal;
+  letter-spacing: 0px;
+  text-align: left;
+  line-height: 25px;
+}

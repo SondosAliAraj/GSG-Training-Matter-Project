@@ -8,12 +8,14 @@
 .seeJournalBtn {
   font-family: "Poppins", sans-serif;
   text-transform: uppercase;
-  width: 120px;
+  width: fit-content;
   height: 30px;
   border: none;
   background-color: black;
   color: white;
   margin-top: 50px;
+  padding-left: 15px;
+  padding-right: 15px;
   cursor: pointer;
 
 }

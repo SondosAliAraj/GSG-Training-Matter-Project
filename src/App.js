@@ -12,6 +12,7 @@ import RecommendedVideos from "./components/RecommendedVideos";
 import AsSeenOn from "./components/AsSeenOn";
 import Footer from "./components/Footer";
 import ImageSlider from "./components/ImageSlider";
+import QuickViewPopup from "./components/QuickViewPopup";
 // import ImageSlider from "./ImageSlider";
 
 
@@ -48,6 +49,7 @@ import ImageSlider from "./components/ImageSlider";
 function App() {
   return (
     <div className={styles.mainContainer}>
+      <QuickViewPopup/>
       <AddsBar />
       <Header />
       <div className={styles.slidesContainer}>
