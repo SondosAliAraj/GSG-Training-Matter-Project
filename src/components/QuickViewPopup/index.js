@@ -1,88 +1,65 @@
-import React, { useState } from "react";
+import React from "react";
 import styles from "./style.module.css";
 import { productsArray } from "./Response";
-import Modal from "react-modal";
 import BlackButton from "../BlackButton";
 import RatingStars from "./RatingStars";
 import Size from "./Size";
 import ItemQuantity from "./ItemQuantity";
 import AddToWishList from "./AddToWishList";
-import { BiX } from "react-icons/bi";
+import Details from "./Details";
+import ImageDetails from "./ImageDetails";
 
-const QuickViewPopup = () => {
-  const [modalIsOpen, setmodalIsOpen] = useState(false);
-  const [Image, setImage] = useState(0);
+const QuickViewPopup = ({
+  title,
+  images,
+  price,
+  description,
+  discountPercentage,
+  rating,
+  stock,
+  brand,
+  category,
+  size
+}) => {
   const { products } = productsArray;
   return (
     <div className={styles.QVPopupContainer}>
-      {/* <Modal isOpen={isOpen} onRequestClose={() => setmodalIsOpen(false)}> */}
-        {products.map((item) => (
-          <>
-            <div className={styles.headerContainer}>
-              <p>{item.title}</p>
-              {/* <BiX /> */}
-              {/* <img
-                className={styles.closeIcon}
-                src="./images/rectangle-xmark-solid.svg"
-                alt=""
-              /> */}
-            </div>
-            <div className={styles.detailsContainer} key={item._id}>
-              <div className={styles.box}>
-                <div className={styles.row}>
-                  <div className={styles.thumb}>
-                    {item.images.map((img, index) => (
-                      <img
-                        src={img}
-                        alt=""
-                        key={index}
-                        onClick={() => setImage(index)}
-                      />
-                    ))}
-                  </div>
-                  <div className={styles.bigImage}>
-                    <img src={item.images[Image]} alt="" />
-                  </div>
-                </div>
+      {products.map((item) => (
+        <>
+          <div className={styles.headerContainer}>
+            <p>{title}</p>
+          </div>
+          <div className={styles.detailsContainer} key={item._id}>
+            <ImageDetails images={images} />
+            <div className={styles.detailsDescription}>
+              <h3>{title}</h3>
+              <div className={styles.priceRatingContainer}>
+                <span>${price}</span>
+                <RatingStars rating={rating} />
               </div>
-              <div className={styles.detailsDescription}>
-                <h3>{item.title}</h3>
-                <div className={styles.priceRatingContainer}>
-                  <span>${item.price}</span>
-                  <RatingStars rating={item.rating} />
+              <div className={styles.des}>
+                <h5>Description</h5>
+                <p>{description}</p>
+              </div>
+              <Details title="Category" info={category} />
+              <Details title="Brand" info={brand} />
+              <Details title="Stock" info={stock} />
+              <Details title="Discount" info={discountPercentage + `%`} />
+              {/* <Size availableSize={size} /> */}
+              <div className={styles.footerContainer}>
+                <ItemQuantity />
+                <div className={styles.addToCart}>
+                  <BlackButton title="Add to cart" />
                 </div>
-                <div className={styles.des}>
-                  <h5>Description</h5>
-                  <p>{item.description}</p>
-                </div>
-                <div className={styles.moreDetails}>
-                  <h5>Artisan Employment</h5>
-                  <p>{item.category}</p>
-                </div>
-                <div className={styles.moreDetails}>
-                  <h5>Partnership</h5>
-                  <p>{item.category}</p>
-                </div>
-                <div className={styles.moreDetails}>
-                  <h5>In Collab</h5>
-                  <p>{item.category}</p>
-                </div>
-                <Size />
-                <div className={styles.footerContainer}>
-                  <ItemQuantity />
-                  <div className={styles.addToCart}>
-                    <BlackButton title="Add to cart" />
-                  </div>
-                  <div className={styles.addToWishList}>
-                    <AddToWishList />
-                  </div>
+                <div className={styles.addToWishList}>
+                  <AddToWishList />
                 </div>
               </div>
             </div>
-            <BlackButton title="View Full product Details" />
-          </>
-        ))}
-      {/* </Modal> */}
+          </div>
+          <BlackButton title="View Full product Details" />
+        </>
+      ))}
     </div>
   );
 };

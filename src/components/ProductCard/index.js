@@ -1,16 +1,31 @@
-import React,{useState} from "react";
-import BlackButton from "../BlackButton";
+import React, { useState } from "react";
 import QuickViewPopup from "../QuickViewPopup";
 import NewTag from "./NewTag";
 import styles from "./style.module.css";
 import Modal from "react-modal";
 
-const ProductCard = ({ img, description, price }) => {
+const ProductCard = ({
+  title,
+  images,
+  price,
+  description,
+  discountPercentage,
+  rating,
+  stock,
+  brand,
+  category,
+  thumbnail,
+  size,
+}) => {
   const [modalIsOpen, setModalIsOpen] = useState(false);
   return (
     <div className={styles.mainContainer}>
       <div className={styles.Card}>
-        <img className={styles.productImage} src={img} alt="product img" />
+        <img
+          className={styles.productImage}
+          src={thumbnail}
+          alt="product img"
+        />
         <NewTag tagTitle="new" />
         <div className={styles.QVBtn}>
           {/* <BlackButton title="quickView" /> */}
@@ -20,17 +35,15 @@ const ProductCard = ({ img, description, price }) => {
           >
             quick view
           </button>
-          {/* <QuickViewPopup isOpen={modalIsOpen}/> */}
           <div>
             <Modal
               isOpen={modalIsOpen}
               onRequestClose={() => setModalIsOpen(false)}
-              style={
-                {
-                  overlay: {
-                    backgroundColor: 'grey'
-                }}
-              }
+              style={{
+                overlay: {
+                  backgroundColor: "grey",
+                },
+              }}
             >
               <button
                 className={styles.closeBtn}
@@ -38,11 +51,22 @@ const ProductCard = ({ img, description, price }) => {
               >
                 X
               </button>
-              <QuickViewPopup />
+              <QuickViewPopup
+                title={title}
+                images={images}
+                price={price}
+                description={description}
+                rating={rating}
+                category={category}
+                discountPercentage={discountPercentage}
+                stock={stock}
+                brand={brand}
+                size={size}
+              />
             </Modal>
           </div>
         </div>
-        <p className={styles.productDescription}>{description}</p>
+        <p className={styles.productDescription}>{title}</p>
         <p className={styles.productPrice}>{price}</p>
       </div>
     </div>

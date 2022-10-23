@@ -2,7 +2,6 @@ import styles from "./App.module.css";
 import { data } from "./Response";
 import AddsBar from "./components/AddsBar";
 import Header from "./components/Header";
-import SliderProductsBody from "./components/SliderProductsBody";
 import ProductCard from "./components/ProductCard";
 import AboutMatter from "./components/AboutMatter";
 import Explore from "./components/Explore";
@@ -12,44 +11,43 @@ import RecommendedVideos from "./components/RecommendedVideos";
 import AsSeenOn from "./components/AsSeenOn";
 import Footer from "./components/Footer";
 import ImageSlider from "./components/ImageSlider";
-import QuickViewPopup from "./components/QuickViewPopup";
-// import ImageSlider from "./ImageSlider";
+import { productsArray } from "./PopupResponseData";
 
 
-  const slides = [
-    {
-      url: "./images/sliderImg1.png",
-    },
-    {
-      url: "./images/sliderImg2.png",
-    },
-    {
-      url: "./images/sliderImg3.png",
-    },
-    {
-      url: "./images/sliderImg4.png",
-    },
-    {
-      url: "./images/sliderImg5.png",
-    },
-    {
-      url: "./images/sliderImg6.png",
-    },
-    {
-      url: "./images/sliderImg7.png",
-    },
-    {
-      url: "./images/sliderImg8.png",
-    },
-  ];
-
-
-
+const slides = [
+  {
+    url: "./images/sliderImg1.png",
+  },
+  {
+    url: "./images/sliderImg2.png",
+  },
+  {
+    url: "./images/sliderImg3.png",
+  },
+  {
+    url: "./images/sliderImg4.png",
+  },
+  {
+    url: "./images/sliderImg5.png",
+  },
+  {
+    url: "./images/sliderImg6.png",
+  },
+  {
+    url: "./images/sliderImg7.png",
+  },
+  {
+    url: "./images/sliderImg8.png",
+  },
+];
 
 function App() {
+  const {products} = productsArray;
   return (
     <div className={styles.mainContainer}>
-      <QuickViewPopup/>
+      {/* {productsArray.products.map((item) => (
+        <QuickViewPopup {...item} />
+      ))} */}
       <AddsBar />
       <Header />
       <div className={styles.slidesContainer}>
@@ -57,8 +55,8 @@ function App() {
       </div>
       <TopicTitle title="Featured" />
       <div className={styles.productsCardsContainer}>
-        {data.map((item) => (
-          <ProductCard {...item} />
+        {products.map((item, index) => (
+          <ProductCard key={index} {...item} />
         ))}
       </div>
       <AboutMatter />
