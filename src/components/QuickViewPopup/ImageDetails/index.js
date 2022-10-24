@@ -5,7 +5,7 @@ const ImageDetails = ({ images }) => {
   return (
     <div className={styles.box}>
       <div className={styles.row}>
-        <div className={styles.thumb}>
+              <div className={styles.thumb}>
           {images.map((img, index) => (
             <img src={img} alt="" key={index} onClick={() => setImage(index)} />
           ))}

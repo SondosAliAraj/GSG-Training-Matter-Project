@@ -202,4 +202,7 @@
   .thumb img {
     width: 50px;
   }
+  .detailsDescription{
+    margin-top: 70px;
+  }
 }
