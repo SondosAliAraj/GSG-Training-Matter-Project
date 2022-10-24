@@ -63,3 +63,32 @@ export const videosArray = [
     description: "Lorem ipsum dolor sit amet",
   },
 ];
+
+export const slides = [
+  {
+    url: "./images/sliderImg1.png",
+  },
+  {
+    url: "./images/sliderImg2.png",
+  },
+  {
+    url: "./images/sliderImg3.png",
+  },
+  {
+    url: "./images/sliderImg4.png",
+  },
+  {
+    url: "./images/sliderImg5.png",
+  },
+  {
+    url: "./images/sliderImg6.png",
+  },
+  {
+    url: "./images/sliderImg7.png",
+  },
+  {
+    url: "./images/sliderImg8.png",
+  },
+];
+
+

@@ -1,5 +1,5 @@
 import styles from "./App.module.css";
-import { data } from "./Response";
+import { slides } from "./Response";
 import AddsBar from "./components/AddsBar";
 import Header from "./components/Header";
 import ProductCard from "./components/ProductCard";
@@ -12,34 +12,6 @@ import AsSeenOn from "./components/AsSeenOn";
 import Footer from "./components/Footer";
 import ImageSlider from "./components/ImageSlider";
 import { productsArray } from "./PopupResponseData";
-
-
-const slides = [
-  {
-    url: "./images/sliderImg1.png",
-  },
-  {
-    url: "./images/sliderImg2.png",
-  },
-  {
-    url: "./images/sliderImg3.png",
-  },
-  {
-    url: "./images/sliderImg4.png",
-  },
-  {
-    url: "./images/sliderImg5.png",
-  },
-  {
-    url: "./images/sliderImg6.png",
-  },
-  {
-    url: "./images/sliderImg7.png",
-  },
-  {
-    url: "./images/sliderImg8.png",
-  },
-];
 
 function App() {
   const {products} = productsArray;
