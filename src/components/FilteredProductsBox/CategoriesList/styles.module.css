@@ -1,0 +1,34 @@
+.filterResetContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  border-bottom: 2px solid rgb(212, 210, 210);
+  margin-bottom: 10%;
+}
+.filterResetContainer p {
+  cursor: pointer;
+  font-size: 18px;
+  text-transform: uppercase;
+  margin-bottom: 4%;
+}
+.filterResetContainer p:hover {
+  color: orange;
+}
+.categoryItem {
+  width: 100%;
+  cursor: pointer;
+  font-size: 18px;
+  text-transform: uppercase;
+  margin-bottom: 10%;
+    /* display: flex;
+  flex-direction: column; */
+  
+}
+.categoryItem:hover{
+  color: orange;
+}
+.categoriesContainer{
+  display: flex;
+  flex-direction: column;
+}

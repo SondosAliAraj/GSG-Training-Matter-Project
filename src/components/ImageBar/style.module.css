@@ -1,0 +1,45 @@
+@import url("https://fonts.googleapis.com/css2?family=Inconsolata:wght@300&family=Poppins:wght@300&display=swap");
+.imageBarContainer {
+  opacity: 1;
+  background-color: rgba(243, 243, 243, 1);
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+}
+.coverImage {
+  opacity: 1;
+  height: fit-content;
+}
+.Description h1 {
+  opacity: 1;
+  color: rgba(51, 51, 58, 1);
+  font-size: 60px;
+  font-weight: 400;
+  font-style: normal;
+  letter-spacing: 0px;
+  text-align: center;
+  line-height: 90px;
+  font-family: "Poppins", sans-serif;
+}
+.Description p {
+  opacity: 1;
+  color: rgba(3, 3, 3, 1);
+  font-size: 18px;
+  font-weight: 300;
+  font-style: normal;
+  letter-spacing: 0px;
+  text-align: center;
+  line-height: 30px;
+  font-family: "Poppins", sans-serif;
+  width: 100%;
+}
+.Description {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  width: 40%;
+  top: 30%;
+  left: 25%;
+}

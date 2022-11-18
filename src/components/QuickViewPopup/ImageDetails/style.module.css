@@ -4,6 +4,7 @@
   overflow: hidden;
   /* margin-left: 25px; */
   margin-right: 25px;
+  height: 350px;
 }
 
 .bigImage img {

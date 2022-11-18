@@ -1,49 +1,23 @@
 import React, { useState } from "react";
 import QuickViewPopup from "../QuickViewPopup";
-import NewTag from "./NewTag";
+import NewTag from "../ProductCard/NewTag";
 import styles from "./style.module.css";
 import Modal from "react-modal";
 
-//{
-//   id,
-//   title,
-//   image,
-//   images,
-//   price,
-//   description,
-//   discountPercentage,
-//   rating,
-//   stock,
-//   brand,
-//   category,
-//   thumbnail,
-//   size,
-// }
-
-const ProductCard = ({
+const FilteredCardTest = ({
   id,
   title,
   image,
-  images,
   price,
   description,
-  discountPercentage,
   rating,
-  stock,
-  brand,
   category,
-  thumbnail,
-  size,
 }) => {
   const [modalIsOpen, setModalIsOpen] = useState(false);
   return (
     <div className={styles.mainContainer}>
       <div className={styles.Card}>
-        <img
-          className={styles.productImage}
-          src={thumbnail}
-          alt="product img"
-        />
+        <img className={styles.productImage} src={image} alt="product img" />
         <NewTag tagTitle="new" />
         <div className={styles.QVBtn}>
           {/* <BlackButton title="quickView" /> */}
@@ -71,15 +45,11 @@ const ProductCard = ({
               </button>
               <QuickViewPopup
                 title={title}
-                images={images}
+                image={image}
                 price={price}
                 description={description}
-                rating={rating}
+                rating={rating.rate}
                 category={category}
-                discountPercentage={discountPercentage}
-                stock={stock}
-                brand={brand}
-                size={size}
               />
             </Modal>
           </div>
@@ -91,4 +61,4 @@ const ProductCard = ({
   );
 };
 
-export default ProductCard;
+export default FilteredCardTest;
