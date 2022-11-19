@@ -61,13 +61,27 @@ const FilteredProductsBox = () => {
     } else if (filterTextValueS === "all") {
       return item;
     } else if (filterTextValueS === "price") {
-      return item.price > 55.99;
+     return HighestToLowestPriceSorting.map(item => { return item });
+      // for (let i = 0; i < HighestToLowestPriceSorting.length; i++){
+      //   return (item = HighestToLowestPriceSorting[i]);
+      // }
+      // setNewProductList(HighestToLowestPriceSorting);
     } else if (filterTextValueS === "rating") {
-      return item.rating.rate > 4;
+      return RatingSorting.map((item) => {
+        return item;
+      });
+      // return item.rating.rate > 4;
+      // setNewProductList(RatingSorting);
     } else {
       return item;
     }
   });
+
+
+ 
+
+
+
 
   // const filteredProductListBySort = filteredProductList.filter((item) => {
   //   if (filterTextValueS === "all") {
