@@ -4,6 +4,7 @@ import HomePage from "./views/HomePage";
 import ProductListing from "./views/ProductListing";
 import NotFound from "./views/NotFound";
 import Layout from "./views/Layout";
+import LoginPage from "./views/LoginPage";
 
 function App() {
   return (
@@ -11,9 +12,10 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route element={<Layout/>}>
-            <Route index element={<HomePage />} />
+            <Route index  element={<HomePage />} />
             <Route path="productListing" element={<ProductListing />} />
           </Route>
+          <Route path="login" element={<LoginPage/>}/>
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>

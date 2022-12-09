@@ -46,7 +46,6 @@ const ProductCard = ({
         />
         <NewTag tagTitle="new" />
         <div className={styles.QVBtn}>
-          {/* <BlackButton title="quickView" /> */}
           <button
             className={styles.quickViewBtn}
             onClick={() => setModalIsOpen(true)}

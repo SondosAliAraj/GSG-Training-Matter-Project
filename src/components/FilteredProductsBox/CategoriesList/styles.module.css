@@ -7,12 +7,15 @@
   margin-bottom: 10%;
 }
 .filterResetContainer p {
-  cursor: pointer;
+  /* cursor: pointer; */
   font-size: 18px;
   text-transform: uppercase;
   margin-bottom: 4%;
 }
-.filterResetContainer p:hover {
+.Reset{
+  cursor: pointer;
+}
+.Reset:hover {
   color: orange;
 }
 .categoryItem {

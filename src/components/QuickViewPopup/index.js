@@ -9,6 +9,7 @@ import AddToWishList from "./AddToWishList";
 import Details from "./Details";
 import ImageDetails from "./ImageDetails";
 import {data} from '../../api'
+import ProductImagesDetails from "../ProductImagesDetails";
 
 const QuickViewPopup = ({
   title,
@@ -32,7 +33,7 @@ const QuickViewPopup = ({
             <p>{title}</p>
           </div>
           <div className={styles.detailsContainer} key={item._id}>
-            <ImageDetails image={image} />
+            <ProductImagesDetails images={images}/>
             <div className={styles.detailsDescription}>
               <h3>{title}</h3>
               <div className={styles.priceRatingContainer}>

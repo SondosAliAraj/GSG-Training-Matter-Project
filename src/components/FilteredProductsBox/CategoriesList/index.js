@@ -43,7 +43,12 @@ const CategoriesList = (props) => {
     <>
       <div className={styles.filterResetContainer}>
         <p>Filter</p>
-        <p onClick={() => handleOnClickEvent("all products")}>Reset</p>
+        <p
+          className={styles.Reset}
+          onClick={() => handleOnClickEvent("all products")}
+        >
+          Reset
+        </p>
       </div>
 
       <div

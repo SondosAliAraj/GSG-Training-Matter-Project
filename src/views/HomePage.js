@@ -15,11 +15,6 @@ const HomePage = () => {
   const { products } = productsArray;
   return (
     <div className={styles.mainContainer}>
-      {/* {productsArray.products.map((item) => (
-        <QuickViewPopup {...item} />
-      ))} */}
-      {/* <AdsBar />
-      <Header /> */}
       <div className={styles.slidesContainer}>
         <ImageSlider slides={slides} />
       </div>
@@ -37,7 +32,6 @@ const HomePage = () => {
         <TopicTitle title="As Seen On" />
         <AsSeenOn />
       </div>
-      {/* <Footer /> */}
     </div>
   );
 };
