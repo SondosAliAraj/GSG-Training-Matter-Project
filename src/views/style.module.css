@@ -1,0 +1,62 @@
+.firstP {
+  opacity: 1;
+  color: rgba(102, 102, 102, 1);
+  font-size: 16px;
+  font-weight: 400;
+  font-style: normal;
+  letter-spacing: 0px;
+  /* text-align: justified; */
+  text-align: justify;
+  line-height: 25px;
+  width: 800px;
+}
+
+.secondP {
+  margin-top: 3%;
+  opacity: 1;
+  color: rgba(51, 51, 58, 1);
+  font-size: 16px;
+  font-weight: 400;
+  font-style: normal;
+  letter-spacing: 0px;
+  /* text-align: justified; */
+  line-height: 25px;
+  width: 800px;
+  text-align: justify;
+}
+
+.ParaContainer{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.cardsContainer{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  margin-top: 3%;
+}
+
+.productsCardsContainer{
+    display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  margin-top: 3%;
+}
+
+.asSeenOnInContainer{
+      display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  margin-top: 3%;
+}
+
+.container{
+        display: flex;
+  align-items: center;
+  justify-content: center;
+}

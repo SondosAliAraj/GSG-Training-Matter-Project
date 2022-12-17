@@ -1,0 +1,21 @@
+.recommendedVideosContainer {
+  /* width: auto; */
+  /* height: 600px; */
+
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(12rem, 16rem));
+  gap: 9.2rem;
+  /* margin-left: 10%; */
+  justify-content: center;
+  align-items: center;
+}
+
+.mainContainer {
+  background-color: rgba(252, 252, 252, 1);
+  width: 100%;
+  /* padding: 10px; */
+}
+
+.btnContainer{
+    margin-top: 0px;
+}

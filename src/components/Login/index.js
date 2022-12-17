@@ -12,6 +12,8 @@ import {
 import LockOutlinedIcon from "@material-ui/icons/LockOutlined";
 import FormControlLabel from "@material-ui/core/FormControlLabel";
 import Checkbox from "@material-ui/core/Checkbox";
+import { useCookies } from "react-cookie";
+import { useNavigate } from "react-router-dom";
 const Login = () => {
   const paperStyle = {
     padding: 20,
@@ -23,21 +25,25 @@ const Login = () => {
   const btnstyle = { margin: "8px 0" };
 
   const [formData, setFormData] = useState({});
+  const [cookie, setCookie] = useCookies();
+  const navigate = useNavigate();
 
-  const handleUserNameChange = (e) => {
-    setFormData({ ...formData, userName: e.target.value });
+  const handleEmailChange = (e) => {
+    setFormData({ ...formData, email: e.target.value });
   };
   const handlePasswordChange = (e) => {
     setFormData({ ...formData, password: e.target.value });
   };
-  const handleLoginButton = async() => {
-      console.log(formData);
+  const handleLoginButton = async (e) => {
+    // e.preventDefault();
+    console.log(formData);
 
-    const data= await axios.get(
-      "https://restapi.adequateshop.com/api/authaccount/login",
+    // const data =
+    await axios.post(
+      "http://restapi.adequateshop.com/api/authaccount/login",
       formData
-          );
-      console.log({data})
+    );
+    // console.log({ data });
   };
   return (
     <Grid>
@@ -49,12 +55,12 @@ const Login = () => {
           <h2>Sign In</h2>
         </Grid>
         <TextField
-          value={formData.userName}
-          label="Username"
-          placeholder="Enter username"
+          value={formData.email}
+          label="Email"
+          placeholder="Enter email"
           fullWidth
           required
-          onChange={handleUserNameChange}
+          onChange={handleEmailChange}
         />
         <TextField
           value={formData.password}
@@ -70,25 +76,34 @@ const Login = () => {
           label="Remember me"
         />
 
-        <Button
-          type="submit"
-          color="primary"
-          variant="contained"
-          style={btnstyle}
-          fullWidth
-                  onClick={async() => {
+          <Button
+            type="submit"
+            color="primary"
+            variant="contained"
+            style={btnstyle}
+            fullWidth
+            onClick={async () => {
               console.log(formData);
 
-    const data= await axios.post(
-      "https://restapi.adequateshop.com/api/authaccount/login",
-      formData
-          );
-      console.log({data})
-          }}
-        >
-          Sign in
-              </Button>
-              <button onClick={handleLoginButton}>submit</button>
+              const {
+                data: {
+                  data: { Token, Name, Id },
+                },
+              } = await axios.post(
+                "http://restapi.adequateshop.com/api/authaccount/login",
+                formData
+              );
+
+              console.log({ Token, Name, Id });
+              setCookie("token", Token);
+              setCookie("name", Name);
+              setCookie("id", Id);
+              navigate("/");
+            }}
+          >
+            Sign in
+          </Button>
+        {/* <button onClick={handleLoginButton}>submit</button> */}
         <Typography>
           <Link href="#">Forgot password ?</Link>
         </Typography>

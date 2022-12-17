@@ -1,0 +1,27 @@
+.button {
+  text-decoration: none;
+  opacity: 1;
+  color: rgba(51, 51, 58, 1);
+  font-size: 12px;
+  font-weight: 600;
+  font-style: normal;
+  letter-spacing: 2px;
+  text-align: center;
+  line-height: 20px;
+  text-transform: uppercase;
+  border-bottom: 3px solid rgba(51, 51, 58, 1);
+  padding-left: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.mainContainer {
+  width: 170px;
+  display: flex;
+  justify-content: space-between;
+}

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import QuickViewPopup from "../QuickViewPopup";
+import QuickViewPopupF from "../QuickViewPopupF";
 import NewTag from "../ProductCard/NewTag";
 import styles from "./style.module.css";
 import Modal from "react-modal";
@@ -43,7 +43,7 @@ const FilteredCardTest = ({
               >
                 X
               </button>
-              <QuickViewPopup
+              <QuickViewPopupF
                 title={title}
                 image={image}
                 price={price}
@@ -51,6 +51,15 @@ const FilteredCardTest = ({
                 rating={rating.rate}
                 category={category}
               />
+
+              {/* <QuickViewPopup
+                title={title}
+                image={image}
+                price={price}
+                description={description}
+                rating={rating.rate}
+                category={category}
+              /> */}
             </Modal>
           </div>
         </div>
